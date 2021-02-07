@@ -1,8 +1,15 @@
 import React from 'react';
 
 import {
-  Text, Image, StyleSheet, Dimensions, ImageBackground, StatusBar,
+  Text,
+  Image,
+  StyleSheet,
+  Dimensions,
+  ImageBackground,
+  StatusBar,
 } from 'react-native';
+import Menu from '../../components/Menu';
+import BackgroundImage from './../../assets/bg3.jpg';
 
 const styles = StyleSheet.create({
   container: {
@@ -35,24 +42,20 @@ const styles = StyleSheet.create({
 
 const Main = () => (
   <ImageBackground
-    source={{
-      uri: 'https://s3-sa-east-1.amazonaws.com/rocketseat-cdn/background.png',
-    }}
+    source={BackgroundImage}
     style={styles.container}
-    resizeMode="cover"
-  >
+    resizeMode="cover">
     <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
     <Image
       source={{
-        uri: 'https://s3-sa-east-1.amazonaws.com/rocketseat-cdn/rocketseat_logo.png',
+        uri:
+          'https://user-images.githubusercontent.com/8621344/99892392-6f32dc80-2c42-11eb-8c32-db0fa4a66a81.png',
       }}
       style={styles.logo}
       resizeMode="contain"
     />
-    <Text style={styles.welcome}>Bem-vindo ao Template Básico!</Text>
-    <Text style={styles.instructions}>Essa é a tela principal da sua aplicação =)</Text>
-    <Text style={styles.instructions}>Você pode editar a tela no arquivo:</Text>
-    <Text style={[styles.instructions, styles.fileName]}>src/pages/Main/index.js</Text>
+
+    <Menu />
   </ImageBackground>
 );
 
