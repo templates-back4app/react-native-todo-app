@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import Menu from '../../components/Menu';
 import BackgroundImage from './../../assets/bg3.jpg';
+import Logo from './../../assets/back4app-logo.png';
 
 const styles = StyleSheet.create({
   container: {
@@ -46,14 +47,7 @@ const Main = () => (
     style={styles.container}
     resizeMode="cover">
     <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
-    <Image
-      source={{
-        uri:
-          'https://user-images.githubusercontent.com/8621344/99892392-6f32dc80-2c42-11eb-8c32-db0fa4a66a81.png',
-      }}
-      style={styles.logo}
-      resizeMode="contain"
-    />
+    <Image source={Logo} style={styles.logo} resizeMode="contain" />
 
     <Menu />
   </ImageBackground>

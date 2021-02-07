@@ -1,14 +1,10 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 
+import TaskList from '../../components/TaskList';
 // import { Container } from './styles';
 
 const Work = () => {
-  return (
-    <View>
-      <Text>Work page</Text>
-    </View>
-  );
+  return <TaskList />;
 };
 
 export default Work;

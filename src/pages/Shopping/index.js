@@ -1,14 +1,9 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-
+import TaskList from '../../components/TaskList';
 // import { Container } from './styles';
 
 const Shopping = () => {
-  return (
-    <View>
-      <Text>Shooping Page</Text>
-    </View>
-  );
+  return <TaskList />;
 };
 
 export default Shopping;
