@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {Alert, Text, StyleSheet} from 'react-native';
 import {
   Container,
   Header,
@@ -13,6 +13,7 @@ import {
   Input,
   ListItem,
 } from 'native-base';
+
 // import { Container } from './styles';
 
 const CATEGORY = Object.freeze({
@@ -23,6 +24,7 @@ const CATEGORY = Object.freeze({
 
 const AddTodo = ({navigation}) => {
   const [category, setCategory] = useState('');
+  const [description, setDescription] = useState('');
 
   function toggleCategory(selectedCategory) {
     setCategory(selectedCategory);
@@ -30,14 +32,13 @@ const AddTodo = ({navigation}) => {
 
   function handleSubmit() {
     // TODO: implement this method.
-    navigation.goBack();
   }
   return (
     <Container>
       <Content>
         <Form>
           <Item>
-            <Input placeholder="Task Name" last />
+            <Input placeholder="Task Name" onChangeText={setDescription} last />
           </Item>
 
           <Title style={styles.titleStyle}>Choose Category</Title>
