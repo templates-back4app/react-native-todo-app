@@ -9,7 +9,7 @@ import {
   StatusBar,
 } from 'react-native';
 import Menu from '../../components/Menu';
-import BackgroundImage from './../../assets/bg3.jpg';
+import BackgroundImage from './../../assets/bg.jpg';
 import Logo from './../../assets/back4app-logo.png';
 
 const styles = StyleSheet.create({
