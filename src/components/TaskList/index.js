@@ -16,28 +16,17 @@ const TaskList = ({todos = []}) => {
     <Container style={{flex: 1}}>
       <Content>
         <List>
-          <ListItem>
-            <Body>
-              <Text>Kumar Pratik</Text>
-              <Text note>
-                Doing what you like will always keep you happy . .
-              </Text>
-            </Body>
-            <Right>
-              <Text note>3:43 pm</Text>
-            </Right>
-          </ListItem>
-          <ListItem>
-            <Body>
-              <Text>Kumar Pratik</Text>
-              <Text note>
-                Doing what you like will always keep you happy . .
-              </Text>
-            </Body>
-            <Right>
-              <Text note>3:43 pm</Text>
-            </Right>
-          </ListItem>
+          {todos.map((task) => (
+            <ListItem>
+              <Body>
+                <Text>{task.author}</Text>
+                <Text note>{task.description}</Text>
+              </Body>
+              <Right>
+                <Text note>{task.created_at}</Text>
+              </Right>
+            </ListItem>
+          ))}
         </List>
       </Content>
     </Container>
