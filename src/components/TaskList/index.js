@@ -12,18 +12,20 @@ import {
 // import { Container } from './styles';
 
 const TaskList = ({todos = []}) => {
+  if (todos.length === 0) return <Text>No tasks on this list</Text>;
+
   return (
     <Container style={{flex: 1}}>
       <Content>
         <List>
           {todos.map((task) => (
-            <ListItem>
+            <ListItem key={task.objectId}>
               <Body>
-                <Text>{task.author}</Text>
-                <Text note>{task.description}</Text>
+                <Text>{task.get('author')}</Text>
+                <Text note>{task.get('description')}</Text>
               </Body>
               <Right>
-                <Text note>{task.created_at}</Text>
+                <Text note>{task.createdAt.toLocaleTimeString('en-US')}</Text>
               </Right>
             </ListItem>
           ))}
