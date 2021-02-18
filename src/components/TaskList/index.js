@@ -13,7 +13,6 @@ import {
 
 const TaskList = ({todos = []}) => {
   if (todos.length === 0) return <Text>No tasks on this list</Text>;
-
   return (
     <Container style={{flex: 1}}>
       <Content>
